@@ -12,14 +12,25 @@
 
 ## 快速开始
 
-### 1. 克隆项目
+### 方式一：直接运行 exe（推荐，无需安装 Python）
+
+1. 从 [GitHub Releases](https://github.com/xiaoqi526/pdf-word/releases) 下载 `pdf2word.exe`
+2. 将待转换的 PDF 文件放在 `pdf2word.exe` 同目录下
+3. 双击运行 `pdf2word.exe`
+4. 转换完成后会在同目录下生成对应的 `.docx` 文件
+
+> **注意**：exe 文件约 105MB，因为包含了 Python 解释器和所有依赖库。
+
+### 方式二：从源码运行
+
+#### 1. 克隆项目
 
 ```bash
 git clone https://github.com/xiaoqi526/pdf-word.git
 cd pdf-word
 ```
 
-### 2. 创建虚拟环境（推荐）
+#### 2. 创建虚拟环境（推荐）
 
 ```bash
 python -m venv .venv
@@ -31,13 +42,13 @@ python -m venv .venv
 source .venv/bin/activate
 ```
 
-### 3. 一键安装依赖
+#### 3. 一键安装依赖
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 4. 运行
+#### 4. 运行
 
 将待转换的 PDF 文件放在项目目录下，然后执行：
 
