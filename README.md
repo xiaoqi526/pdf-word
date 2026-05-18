@@ -10,20 +10,53 @@
 - 精确排版还原 - 映射 PDF 坐标到 Word 页面，保持原始布局
 - 署名和日期定位 - 准确还原签名人、日期的缩进和垂直位置
 
-## 依赖
+## 快速开始
 
-- PyMuPDF (fitz) - PDF 解析和图像提取
-- python-docx - Word 文档生成
-- RapidOCR - OCR 文字识别
-- Pillow / NumPy - 图像处理
+### 1. 克隆项目
 
-## 使用方法
+```bash
+git clone https://github.com/xiaoqi526/pdf-word.git
+cd pdf-word
+```
+
+### 2. 创建虚拟环境（推荐）
+
+```bash
+python -m venv .venv
+
+# Windows
+.venv\Scripts\activate
+
+# macOS / Linux
+source .venv/bin/activate
+```
+
+### 3. 一键安装依赖
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4. 运行
+
+将待转换的 PDF 文件放在项目目录下，然后执行：
 
 ```bash
 python pdf2word.py
 ```
 
-将待转换的 PDF 文件放在同一目录下，运行脚本即可生成对应的 Word 文档。
+转换完成后会在同目录下生成对应的 `.docx` 文件。
+
+## 依赖说明
+
+| 库 | 用途 |
+|---|---|
+| PyMuPDF (fitz) | PDF 解析和图像提取 |
+| python-docx | Word 文档生成 |
+| rapidocr-onnxruntime | OCR 文字识别 |
+| Pillow | 图像处理 |
+| NumPy | 数值计算 |
+| lxml | XML 处理（Word 文档底层操作） |
 
 ## 技术要点
 
